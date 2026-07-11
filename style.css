@@ -229,3 +229,16 @@ button {
     pointer-events:none;
 
 }
+
+.question-gif{
+    width:180px;
+    height:auto;
+    display:block;
+    margin:15px auto;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.question-gif:hover{
+    transform:scale(1.05);
+}

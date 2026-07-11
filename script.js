@@ -8,9 +8,20 @@ const questions = [
     "Will you give me a chance to make you happy? ❤️"
 ];
 
+const gifs = [
+    "gifs/gif1.gif",
+    "gifs/gif2.gif",
+    "gifs/gif3.gif",
+    "gifs/gif4.gif",
+    "gifs/gif5.gif",
+    "gifs/gif6.gif",
+    "gifs/gif7.gif"
+];
+
 let current = 0;
 
 const question = document.getElementById("question");
+const questionGif = document.getElementById("questionGif");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 
@@ -28,6 +39,8 @@ yesBtn.addEventListener("click", () => {
     if (current < questions.length) {
 
         question.innerHTML = questions[current];
+questionGif.src = gifs[current];
+
 
         // YES button grows
         yesBtn.style.transform =
@@ -38,6 +51,7 @@ yesBtn.addEventListener("click", () => {
         // Hide buttons
         document.querySelector(".buttons").style.display = "none";
         question.style.display = "none";
+        questionGif.style.display = "none";
 
         // Show letter
         letter.classList.remove("hidden");
